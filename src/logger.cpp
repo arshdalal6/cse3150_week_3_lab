@@ -26,20 +26,52 @@ void updateValue(double* valuePtr, double newValue) {
 
 void printReading(const std::string& label, const double& value) {
     // TODO: pretty-print one reading
-    
+    std::cout << label << " : "  << value << std::endl; 
 }
 
 double average(const double values[], int size) {
-    // TODO: throw "Empty" if size==0, else compute average
-    return 0.0;
+    double sum;
+    double mean;
+
+    for(int i = 0; i < size; i++){
+        sum += values[i];
+    }
+
+    mean = sum / size;
+
+    return mean;
 }
 
 double minValue(const double values[], int size) {
     // TODO: throw "Empty" if size==0, else compute min
-    return 0.0;
+    if(size == 0){
+        throw std::string("Empty");
+    }
+
+    double min = values[0];
+
+    for(int i=1; i < size; i++){
+        if(values[i] < min){
+            min = values[i];
+        }
+    }
+
+    return min;
 }
 
 double maxValue(const double values[], int size) {
     // TODO: throw "Empty" if size==0, else compute max
-    return 0.0;
+    if(size == 0){
+        throw std::string("Empty");
+    }
+
+    double max = values[0];
+
+    for(int i=1; i < size; i++){
+        if(values[i] > max){
+            max = values[i];
+        }
+    }
+    
+    return max;
 }
