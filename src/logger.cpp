@@ -10,7 +10,7 @@ void addReading(const std::string& label, double value,
     // TODO: throw "Full" if size == capacity, else insert and ++size
 
     if(size == capacity){
-        throw "Error, full"
+        throw std::string("Full");
     }
 
     labels[size] = label;
@@ -21,10 +21,12 @@ void addReading(const std::string& label, double value,
 
 void updateValue(double* valuePtr, double newValue) {
     // TODO: write through pointer
+    *valuePtr = newValue;
 }
 
 void printReading(const std::string& label, const double& value) {
     // TODO: pretty-print one reading
+    
 }
 
 double average(const double values[], int size) {
