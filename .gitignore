@@ -1,0 +1,19 @@
+# Ignore build artifacts and executables
+/build/
+starter/build/
+*.o
+*.out
+*.exe
+*.log
+
+# Ignore editor and OS files
+*.swp
+*.swo
+*~
+.DS_Store
+.vscode/
+__pycache__/
+
+# Ignore compiled binaries at root
+logger_test
+main
