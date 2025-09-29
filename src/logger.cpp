@@ -30,14 +30,17 @@ void printReading(const std::string& label, const double& value) {
 }
 
 double average(const double values[], int size) {
-    double sum;
-    double mean;
+    double sum=0.0;
+
+    if (size <= 0) {
+        throw std::string("Empty");
+    }
 
     for(int i = 0; i < size; i++){
         sum += values[i];
     }
 
-    mean = sum / size;
+    double mean = sum / size;
 
     return mean;
 }
