@@ -59,6 +59,7 @@ int main(int argc, char* argv[]) {
             }
         } catch (const std::string& msg) {
             cout << "Error: " << msg << endl;
+            //break;
         }
     }
 
